@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8ef;
+    color: #402719;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #5b3825;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 15px;
+    background-color: #e8d2b8;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #402719;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a0522d;
+}
+
+/* Conteúdo principal */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+section {
+    margin-bottom: 45px;
+    scroll-margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+/* Seção de destaque */
+.destaque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 35px;
+    background-color: #f0dfca;
+    border-radius: 15px;
+}
+
+.destaque > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.destaque h2 {
+    font-size: 30px;
+}
+
+.destaque img {
+    width: 45%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Botão do destaque */
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #75452b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao:hover {
+    background-color: #402719;
+    transform: translateY(-3px);
+}
+
+/* Introdução do cardápio */
+.introducao {
+    margin-bottom: 22px;
+}
+
+/* Cards dos produtos */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 220px;
+    min-width: 0;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px #40271918;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px #40271930;
+}
+
+/* Imagens dos produtos */
+.card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Informações dos produtos */
+.card-info {
+    padding: 18px;
+}
+
+.card-info h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.card-info p {
+    margin-bottom: 12px;
+    color: #75675d;
+}
+
+.card-info strong {
+    display: block;
+    color: #75452b;
+    font-size: 18px;
+}
+
+/* Seções Sobre e Contato */
+#sobre,
+#contato {
+    padding: 25px;
+    background-color: #f0dfca;
+    border-radius: 12px;
+}
+
+/* Botão de contato */
+#contato button {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #75452b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contato button:hover {
+    background-color: #402719;
+}
+
+#contato button:disabled {
+    background-color: #8b7769;
+    cursor: default;
+}
+
+#mensagem {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    padding: 22px;
+    background-color: #5b3825;
+    color: white;
+    text-align: center;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    .destaque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .destaque img {
+        width: 100%;
+        max-width: 100%;
+        height: 260px;
+    }
+
+    .card {
+        flex-basis: 45%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        gap: 12px;
+        padding: 12px 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    .destaque {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .destaque h2 {
+        font-size: 24px;
+    }
+
+    .destaque img {
+        height: 210px;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    #sobre,
+    #contato {
+        padding: 20px;
+    }
+}
